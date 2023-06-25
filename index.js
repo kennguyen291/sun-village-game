@@ -9,7 +9,21 @@ c.fillRect(0,0,canvas.width, canvas.height)
 const image = new Image()
 image.src = './img/World02 Map.png'
 
+const playerImage = new Image()
+playerImage.src = './img/player-still.png'
 
 image.onload = () => {
-    c.drawImage(image,-1430, -700)
+    c.drawImage(image,-700, -700)
+    c.drawImage(
+        playerImage,
+        0, 
+        0,
+        playerImage.width / 6,
+        playerImage.height,
+        canvas.width / 2 - (playerImage.width / 6) / 2 ,
+        canvas.height / 2 - playerImage.height/2,
+        playerImage.width / 6,
+        playerImage.height
+        )
 }
+
